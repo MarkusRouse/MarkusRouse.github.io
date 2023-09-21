@@ -7,7 +7,6 @@ console.log(images);
 
 
 function allStorage() {
-
     let values = [],
         keys = Object.keys(localStorage),
         i = keys.length;
