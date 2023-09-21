@@ -1,11 +1,19 @@
 function loadImages(){
-    const imagesDir = "Resources\\Images";
-
-    fetch(imagesDir)
-        .then (response => response.text())
-        .then (data => {
-            console.log("hola")
-        })
 
 }
-loadImages();
+
+let images = allStorage();
+console.log(images);
+
+
+function allStorage() {
+
+    let values = [],
+        keys = Object.keys(localStorage),
+        i = keys.length;
+
+    while ( i-- ) {
+        values.push( localStorage.getItem(keys[i]) );
+    }
+    return values;
+}
